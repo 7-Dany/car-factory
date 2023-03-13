@@ -9,24 +9,25 @@ from datetime import date
 class CarFactory:
     @staticmethod
     def create_calliope(current_date: date, last_service_date: date, current_mileage: int,
-                        last_service_mileage: int) -> Calliope:
-        return Calliope(last_service_date, current_mileage, last_service_mileage, current_date)
+                        last_service_mileage: int, wear_numbers: [float]) -> Calliope:
+        return Calliope(last_service_date, current_mileage, last_service_mileage, wear_numbers, current_date)
 
     @staticmethod
     def create_glissade(current_date: date, last_service_date: date, current_mileage: int,
-                        last_service_mileage: int) -> Glissade:
-        return Glissade(last_service_date, current_mileage, last_service_mileage, current_date)
+                        last_service_mileage: int, wear_numbers: [float]) -> Glissade:
+        return Glissade(last_service_date, current_mileage, last_service_mileage, wear_numbers, current_date)
 
     @staticmethod
-    def create_palindrome(current_date: date, last_service_date: date, warning_light_is_on: bool) -> Palindrome:
-        return Palindrome(last_service_date, warning_light_is_on, current_date)
+    def create_palindrome(current_date: date, last_service_date: date, warning_light_is_on: bool,
+                          wear_numbers: [float]) -> Palindrome:
+        return Palindrome(last_service_date, warning_light_is_on, wear_numbers, current_date)
 
     @staticmethod
     def create_rorschach(current_date: date, last_service_date: date, current_mileage: int,
-                         last_service_mileage: int) -> Rorschach:
-        return Rorschach(last_service_date, current_mileage, last_service_mileage, current_date)
+                         last_service_mileage: int, wear_numbers: [float]) -> Rorschach:
+        return Rorschach(last_service_date, current_mileage, last_service_mileage, wear_numbers, current_date)
 
     @staticmethod
     def create_thovex(current_date: date, last_service_date: date, current_mileage: int,
-                      last_service_mileage: int) -> Thovex:
-        return Thovex(last_service_date, current_mileage, last_service_mileage, current_date)
+                      last_service_mileage: int, wear_numbers: [float]) -> Thovex:
+        return Thovex(last_service_date, current_mileage, last_service_mileage, wear_numbers, current_date)
